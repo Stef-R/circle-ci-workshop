@@ -11,8 +11,8 @@ jobs:
             ci/build-app.sh
             echo 'This is the delivery pipeline.'
       - store_artifacts:
-        path: /code/artifact
-        destination: prefix
+          path: /code/artifact
+          destination: prefix
       - run:
           name: test step
           command:
