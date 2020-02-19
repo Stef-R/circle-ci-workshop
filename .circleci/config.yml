@@ -10,9 +10,13 @@ jobs:
           command:
             ci/build-app.sh
             echo 'This is the delivery pipeline.'
-      - store_test_results:
-          path: app/build/test-results
+      - store_artifacts:
+        path: /code/artifact
+        destination: prefix
       - run:
           name: test step
           command:
             ci/unit-test-app.sh
+      - store_test_results:
+          path: app/build/test-results
+      
