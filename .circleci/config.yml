@@ -11,7 +11,7 @@ jobs:
             ci/build-app.sh
             echo 'This is the delivery pipeline.'
       - store_test_results:
-          path: test-results
+          path: app/build/test-results
       - run:
           name: test step
           command:
